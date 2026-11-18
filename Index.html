@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Vitor Peixoto | portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo">João.</a>
+      <nav class="navbar">
+        <a href="#inicio" class="active item-navbar">Home</a>
+        <a href="#sobre" class="item-navbar">About Me </a>
+        <a href="#projetos" class="item-navbar">Projects</a>
+        <a href="#portfolio" class="item-navbar">Portfólio</a>
+        <a href="#contatos" class="item-navbar">Contact</a>
+      </nav>
+    </header>
+    <section class="home">
+      <div class="home-content">
+        <h1>hi, I'm João Peixoto</h1>
+        <h3>Frontend Developer</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure neque
+          tenetur aut error suscipit obcaecati, maxime adipisci corrupti
+          voluptas quisquam ipsam voluptatibus ullam esse illo, laboriosam ex.
+        </p>
+        <div class="bnt-box">
+          <a href="#">Hire Me</a>
+          <a href="#">Let's Talk</a>
+        </div>
+      </div>
+      <div class="image-reveal">
+        <img class="image-apollo" src="assets/home.png" alt="Apollo" />
+      </div>
+      <div class="home-sci">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </section>
+    <section id="projetos">
+      <h2 class="projetos-titulo">Meus Projetos</h2>
+      <div class="projetos-caixa">
+        <div class="projetos-card">
+          <!-- não esqueça de mudar o # pelo nome da foto do seu projeto -->
+          <img
+            src="/assets/projeto1.jpg"
+            alt="Projeto 1"
+            class="projetos-imagem"
+          />
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Loja hipotetica</h3>
+            <p class="paragrafo-projeto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates dolore nobis quasi laborum obcaecati!
+            </p>
+          </div>
+        </div>
+        <div class="projetos-card">
+          <img
+            src="/assets/projeto2.jpg"
+            alt="Projeto 1"
+            class="projetos-imagem"
+          />
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Loja hipotetica</h3>
+            <p class="paragrafo-projeto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates dolore nobis quasi laborum obcaecati!
+            </p>
+          </div>
+        </div>
+        <div class="projetos-card">
+          <img
+            src="/assets/projeto3.jpg"
+            alt="Projeto 1"
+            class="projetos-imagem"
+          />
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Loja hipotetica</h3>
+            <p class="paragrafo-projeto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates dolore nobis quasi laborum obcaecati!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contatos" id="contatos">
+      <h2 class="contatos-titulo">Entre em Contato</h2>
+      <form
+        class="formulario-contato"
+        id="formulario"
+        onsubmit="enviarWhats(event)"
+      >
+        <div class="grupo-form">
+          <input placeholder="Nome" class="campo-form" id="nome" />
+        </div>
+        <div class="grupo-form">
+          <textarea
+            placeholder="Digite sua Mensagem"
+            class="campo-form"
+            rows="4"
+            id="mensagem"
+          ></textarea>
+        </div>
+        <button type="submit" class="botao-form">Enviar WhatsApp</button>
+      </form>
+    </section>
+    <script>
+      function enviarWhats(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const mensagem = document.getElementById("mensagem").value;
+        const telefone = "5511961169321";
+
+        const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+        const msgFormatada = encodeURIComponent(texto);
+        const url = `https://wa.me/5511961169321?text=${msgFormatada}`;
+        window.open(url, "_blank");
+      }
+    </script>
+    <footer class="footer">
+  <div class="footer__content" id="border-footer">
+    <p class="footer__name">João.</p>
+    <nav class="footer__links" aria-label="Redes sociais">
+      <a href="https://github.com/seu-usuario" class="midia" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/seu-usuario" class="midia" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:seuemail@exemplo.com" class="midia" >E-mail</a>
+    </nav>
+    <p class="footer__copy">© 2026 João Peixoto. Todos os direitos reservados.</p>
+  </div>
+</footer>
+  </body>
+</html>
